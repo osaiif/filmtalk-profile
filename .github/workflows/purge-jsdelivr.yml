@@ -1,0 +1,13 @@
+name: Purge jsDelivr Cache
+on:
+  push:
+    branches: [main]
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: gacts/purge-jsdelivr-cache@v1
+        with:
+          url: |
+            https://cdn.jsdelivr.net/gh/osaiif/filmtalk-profile@main/p.webp
+            https://cdn.jsdelivr.net/gh/osaiif/filmtalk-profile@main/b.webp
